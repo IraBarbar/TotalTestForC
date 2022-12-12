@@ -5,8 +5,6 @@
     Console.WriteLine();
 }
 
-
-//string[] s = { "qraw", "dop", "ji85", "5754" };
 string[] MadeNewArr()
 {
     int size = 4;
@@ -14,7 +12,7 @@ string[] MadeNewArr()
 
     for (int i = 0; i < userArray.Length; i++)
     {
-        Console.WriteLine($"Введите любые символы {size - i} раза через 'ENTER' ");
+        Console.WriteLine($"Input any characters {size - i} times by pressing 'ENTER' ");
         userArray[i] = Console.ReadLine();
     }
     return userArray;
@@ -31,12 +29,12 @@ void FindLessThree(string[] text, int a)
         }
     }
     if (t == false)
-        Console.WriteLine("There is no element less than three characters in this array!");
+        Console.WriteLine($"There is no element less than {a} characters in this array!");
     else
-        Console.Write($" - в этих значениях длина, где  <= {a} символа !");
+        Console.Write($" - in these values the length <= {a} characters !");
 }
-string[] yorArray = MadeNewArr();
-Console.Write($" Ваш массив: ");
-ShowArray(yorArray);
+string[] yourArray = MadeNewArr();
+Console.Write($"Your array:  ");
+ShowArray(yourArray);
 
-FindLessThree(yorArray, 3);
+FindLessThree(yourArray, 3);
