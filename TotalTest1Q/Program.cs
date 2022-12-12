@@ -5,11 +5,9 @@
     Console.WriteLine();
 }
 
-string[] MadeNewArr()
+string[] MadeNewArr(int size)
 {
-    int size = 4;
     string[] userArray = new string[size];
-
     for (int i = 0; i < userArray.Length; i++)
     {
         Console.WriteLine($"Input any characters {size - i} times by pressing 'ENTER' ");
@@ -33,7 +31,7 @@ void FindLessThree(string[] text, int a)
     else
         Console.Write($" - in these values the length <= {a} characters !");
 }
-string[] yourArray = MadeNewArr();
+string[] yourArray = MadeNewArr(4);
 Console.Write($"Your array:  ");
 ShowArray(yourArray);
 
